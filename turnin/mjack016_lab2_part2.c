@@ -32,8 +32,7 @@ int main(void) {
 		cnt = 1;
         }
 	else if (PINA == 0x03){
-		cnt = 0x80;
-		
+		cnt = 0;
         }
 	PORTC = cnt;
     }
