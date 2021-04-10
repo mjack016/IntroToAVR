@@ -22,18 +22,21 @@ int main(void) {
 	unsigned char cnt = 0;
     while (1) {	
 	tmpA = PINA; 
-	if (PINA ==  0x00){
-        	cnt = 2;       
+	if (tmpA ==  0x00 || tmpA == 0x08){
+        	cnt = 4;       
         }
-	else if (PINA == 0x01){
-		cnt = 1;
+	else if (tmpA == 0x01 || tmpA == 0x02 || tmpA == 0x04 || tmpA == 0x08){
+		cnt = 3;
 	}
-	else if (PINA == 0x02){
+	else if (tmpA == 0x03 || tmpA == 5 || tmpA == 6 || tmpA == 0x0A || tmpA == 0x0C ){
+		cnt = 2;
+        }
+	else if (tmpA == 0x03 || tmpA == 0x07 || tmpA == 0x0B || tmpA == 0x0E){
 		cnt = 1;
         }
-	else if (PINA == 0x03){
+	else{
 		cnt = 0;
-        }
+	}
 	PORTC = cnt;
     }
     return 0;
