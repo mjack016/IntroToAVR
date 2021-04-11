@@ -29,8 +29,9 @@ int main(void) {
 	tmpB = PINB;
 	tmpC = PINC;
         tmpD = (tmpA + tmpB + tmpC) >> 2;
+	tmpD = tmpD & 0xFC;
 	if(tmpA + tmpB + tmpC > 140){
-		tmpD = tmpD | 0x01;
+		tmpD = tmpD |  0x01;
 	}
 	if(tmpA - tmpC > 80){
 		tmpD = tmpD | 0x02;
