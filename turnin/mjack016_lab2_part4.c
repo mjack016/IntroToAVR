@@ -33,7 +33,7 @@ int main(void) {
 	if(tmpA + tmpB + tmpC > 140){
 		tmpD = tmpD |  0x01;
 	}
-	if(tmpA - tmpC > 80){
+	if(tmpA - tmpC > 80 || tmpC - tmpA > 80){
 		tmpD = tmpD | 0x02;
 	}	
 	PORTD = tmpD;
