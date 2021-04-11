@@ -22,7 +22,7 @@ int main(void) {
     	unsigned char tmpA = 0x00;
 	unsigned char tmpB = 0x00;
 	unsigned char tmpC = 0x00;
-	unsigned char short  tmpD = 0x00;
+	unsigned char tmpD = 0x00;
    	
     while (1) {
         tmpA = PINA;
